@@ -1,7 +1,5 @@
 
 
-import { useEffect } from 'react';
-
 function Weather() {
     return (
     <div className="p-4">
@@ -62,16 +60,4 @@ function Weather() {
   }
 
   export default Weather
-
-  function Weather() {
-
-    useEffect(()=>{
-      fetch(`${process.env.REACT_APP_OW_API_URL}/weather/?q=Tokyo&APPID=${process.env.REACT_APP_OW_API_KEY}`)
-      .then(res => res.json())
-      .then(result => {
-        console.log(result);
-      });
-    },[]);
-  
-
   
